@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politicians &mdash; De-anonymisation threat model</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Auxiliary information" href="../assets/Auxiliary-information.html" />
+    <link rel="prev" title="Marketers and advertisers" href="Marketers-and-advertisers.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> De-anonymisation threat model
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Adversaries</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Advertising-eco-systems.html">Advertising eco-systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Black-markets.html">Black markets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data-brokers.html">Data brokers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data-scientists.html">Data scientists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EU-Regulators.html">EU Regulators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Employers.html">Employers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Gray-hats.html">Gray hats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Insurance-companies.html">Insurance companies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Law-enforcement.html">Law enforcement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Marketers-and-advertisers.html">Marketers and advertisers</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Politicians</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Assets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Auxiliary-information.html">Auxiliary information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Data-releases.html">Data releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Target-dataset.html">Target dataset</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Attack vectors</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Classification-analysis.html">Classification analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Graph-matching.html">Graph matching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Matching-features.html">Matching features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Sparsity-based.html">Sparsity-based</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Trail-re-identification.html">Trail re-identification</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Attacks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Inference-attacks.html">Inference attacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Linkage-attacks.html">Linkage attacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Structural-attacks.html">Structural attacks</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Threats</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Content-disclosure.html">Content disclosure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Identity-disclosure.html">Identity disclosure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Link-disclosure.html">Link disclosure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/New-form-of-consent.html">New form of consent</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Assistive technologies</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Adversary-skills.html">Adversary skills</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Behavioural-analysis.html">Behavioural analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Content-analysis.html">Content analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Data-storage.html">Data storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Link-prediction.html">Link prediction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Predictive-analysis.html">Predictive analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Spammer-elimination.html">Spammer elimination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Timeliness.html">Timeliness</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Uses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Advertising-eco-systems.html">Advertising ecosystems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Click-fraud.html">Click fraud (wars)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Customer-churn-analysis.html">Customer churn analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Customer-experience-analysis.html">Customer experience analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Fraud-detection.html">Fraud detection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Market-analysis.html">Market analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Network-monitoring.html">Network monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Recommendation-engines.html">Recommendation engines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Research-and-development.html">Research &amp; development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Risk-modelling.html">Risk modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Sentiment-analysis.html">Sentiment analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Social-network-analysis.html">Social network analysis</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Impacts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Bias-and-discrimination.html">↑ Bias and discrimination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Competition.html">↓ Competition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Data.html">↑ Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Illegal-and-unethical-mining.html">↑ Illegal and unethical mining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Regulation.html">↑ Regulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Surveillance-and-tracking.html">↑ Surveillance and tracking</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/threat-models/">Overview threat models</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/attack-trees/">Attack trees</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://milli-ways.netlify.app/">Data science</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">De-anonymisation threat model</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Politicians</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/docs/adversaries/Politicians.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="politicians">
+<h1>Politicians<a class="headerlink" href="#politicians" title="Permalink to this heading"></a></h1>
+<p>Not a direct adversary but opportunistically, politicians are considered to be among the most likely potential adversaries to hire data analytics professionals and agencies that use programmatic markets and/or buy data from brokers.</p>
+<section id="motivation">
+<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this heading"></a></h2>
+<p>There are as many definitions of “politics” as there are “authorities” who argue an opinion. Common definitions of “politics” highlight the “power” on which power relations are based: Politics is power and focuses on achieving the intended target, namely to have and maintain power, by employing all tools available. Or, “politics” is “the individual’s having dominance over other individuals”. In some cases, politics is depicted as “a process of dialogue and negotiations”, in which political positions and a tendency towards alienation can move politics into a deadlock.</p>
+</section>
+<section id="past-patterns">
+<h2>Past patterns<a class="headerlink" href="#past-patterns" title="Permalink to this heading"></a></h2>
+<p>Moody senior economist Cheng Xu took a new approach to political predictions in 2012. His model used state economic and political data, and included “the grumpy voter effect”, being the only one to predict accurately what was about to happen. And analytics, in particular sentiment analysis, played a bigger and more important role in the election than just predicting the outcome.</p>
+<section id="sentiment-analysis">
+<h3>Sentiment analysis<a class="headerlink" href="#sentiment-analysis" title="Permalink to this heading"></a></h3>
+<p>Seeman uses four types of political alienation: powerlessness, normlessness, meaninglessness and isolation:</p>
+<ul class="simple">
+<li><p>Political powerlessness is the individual’s expectation of the extent of his/her behaviours’ influence on the fulfilment of the desired political outcome. The more negative this expectation is, the more powerless the individual feels.</p></li>
+<li><p>Normlessness is when the individual feels that the authorities with political roles constantly and systematically violate the valued political rules and established traditions before the people.</p></li>
+<li><p>Meaninglessness is felt when the individual fails to understand how the political system works because then s/he will see politics as a chaotic, coincidental and uncontrollable event or chain of events.</p></li>
+<li><p>Isolation assigns very little value to the goals and beliefs shared by the other members or the majority of the society. Isolation starts with the rejection of political goals, norms and tools widely shared by the other members of the political society (or the entire society).</p></li>
+<li><p>The concept of self-estrangement is the most elusive, and seems to mean the psychological state of denying one’s own interests – of seeking out extrinsically satisfying, rather than intrinsically satisfying, activities.</p></li>
+</ul>
+</section>
+<section id="availability-of-algorithms">
+<h3>Availability of algorithms<a class="headerlink" href="#availability-of-algorithms" title="Permalink to this heading"></a></h3>
+<p>The ability to find and target specific groups online has already been developed by data scientists for marketers and advertisers. The search technology of knowing who you are and constantly playing that ad can be applied to politics.</p>
+</section>
+<section id="estimated-cost-of-influencing-campaigns">
+<h3>Estimated cost of influencing campaigns<a class="headerlink" href="#estimated-cost-of-influencing-campaigns" title="Permalink to this heading"></a></h3>
+<p>It is very cheap to target specific individuals with advertising, which in a political context could be fake news, misinformation, or propaganda. Sending persistent, targeted messaging to key voters via social media platforms is extremely cheap, while the cost of detecting those messages automatically is significantly higher. And there you have it. The cost per click is around 25 cents, and the cost per view less than 10 euro per thousand. Influencing state elections costs in the order of a few hundred euro, and European elections in the order of a few thousand euro. And while the greater the difference in voters, the greater the cost to target them, it would be a bit more but still be in those orders.</p>
+</section>
+<section id="example-cambridge-analytica">
+<h3>Example: Cambridge analytica<a class="headerlink" href="#example-cambridge-analytica" title="Permalink to this heading"></a></h3>
+<p>The Cambridge Analytica story was about how a company was able to use and abuse our personal information to target us in ways we can’t even see, let alone understand. Global Science Research created quizzes and surveys inside the social network designed to engage users. The surveys used by the company used inflammatory language designed to stir up the kind of emotion that would prompt an interaction. Cambridge Analytica then used artificial intelligence systems to build “psychographic profiles” (<a class="reference internal" href="../assistive-technologies/Behavioural-analysis.html"><span class="doc std std-doc">behavioural profiles</span></a>) which combined Facebook data with information gathered from other “top commercial data providers” that included specific information about voter demographics, geographics, purchase history, and personal interests.</p>
+<p>The scandal that followed revealed that Facebook is not just bigger than any nation state on Earth, it also plays a pivotal role in their elections. And what many overlook is that Cambridge Analytica was part of a much bigger company, SCL, which had worked as a defence contractor for governments and militaries around the world, then branched into elections in developing countries, and, only in its final iteration, entered western politics.
+Future</p>
+</section>
+</section>
+<section id="current">
+<h2>Current<a class="headerlink" href="#current" title="Permalink to this heading"></a></h2>
+<p>Until now this has been mostly a social media thing. With the unchecked opportunistic nature of humankind in mind, I expect it to grow to include every other platform on the internet, assistance apps, top 100 lists of websites, …</p>
+</section>
+<section id="impact">
+<h2>Impact<a class="headerlink" href="#impact" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Election security is getting a lot of attention. Most of the discussions have focused on voting machines, technological attacks, or the election process as a whole, not on influence campaigns?</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Marketers-and-advertisers.html" class="btn btn-neutral float-left" title="Marketers and advertisers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../assets/Auxiliary-information.html" class="btn btn-neutral float-right" title="Auxiliary information" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+        <a href="https://unseen-uni.netlify.app/">Unseen University</a>, 2022
+
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

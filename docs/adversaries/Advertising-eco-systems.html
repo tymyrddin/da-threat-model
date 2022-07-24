@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advertising eco-systems &mdash; De-anonymisation threat model</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Black markets" href="Black-markets.html" />
+    <link rel="prev" title="De-anonymisation threat model" href="../../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> De-anonymisation threat model
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Adversaries</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Advertising eco-systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Black-markets.html">Black markets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data-brokers.html">Data brokers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data-scientists.html">Data scientists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EU-Regulators.html">EU Regulators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Employers.html">Employers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Gray-hats.html">Gray hats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Insurance-companies.html">Insurance companies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Law-enforcement.html">Law enforcement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Marketers-and-advertisers.html">Marketers and advertisers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Politicians.html">Politicians</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Assets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Auxiliary-information.html">Auxiliary information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Data-releases.html">Data releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Target-dataset.html">Target dataset</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Attack vectors</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Classification-analysis.html">Classification analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Graph-matching.html">Graph matching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Matching-features.html">Matching features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Sparsity-based.html">Sparsity-based</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Trail-re-identification.html">Trail re-identification</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Attacks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Inference-attacks.html">Inference attacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Linkage-attacks.html">Linkage attacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Structural-attacks.html">Structural attacks</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Threats</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Content-disclosure.html">Content disclosure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Identity-disclosure.html">Identity disclosure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Link-disclosure.html">Link disclosure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/New-form-of-consent.html">New form of consent</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Assistive technologies</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Adversary-skills.html">Adversary skills</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Behavioural-analysis.html">Behavioural analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Content-analysis.html">Content analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Data-storage.html">Data storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Link-prediction.html">Link prediction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Predictive-analysis.html">Predictive analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Spammer-elimination.html">Spammer elimination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Timeliness.html">Timeliness</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Uses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Advertising-eco-systems.html">Advertising ecosystems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Click-fraud.html">Click fraud (wars)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Customer-churn-analysis.html">Customer churn analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Customer-experience-analysis.html">Customer experience analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Fraud-detection.html">Fraud detection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Market-analysis.html">Market analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Network-monitoring.html">Network monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Recommendation-engines.html">Recommendation engines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Research-and-development.html">Research &amp; development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Risk-modelling.html">Risk modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Sentiment-analysis.html">Sentiment analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Social-network-analysis.html">Social network analysis</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Impacts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Bias-and-discrimination.html">↑ Bias and discrimination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Competition.html">↓ Competition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Data.html">↑ Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Illegal-and-unethical-mining.html">↑ Illegal and unethical mining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Regulation.html">↑ Regulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Surveillance-and-tracking.html">↑ Surveillance and tracking</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/threat-models/">Overview threat models</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/attack-trees/">Attack trees</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://milli-ways.netlify.app/">Data science</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">De-anonymisation threat model</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Advertising eco-systems</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/docs/adversaries/Advertising-eco-systems.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="advertising-eco-systems">
+<h1>Advertising eco-systems<a class="headerlink" href="#advertising-eco-systems" title="Permalink to this heading"></a></h1>
+<p>Programmatic markets are considered to be among the most likely potential adversaries to broker re-identified data for its customers to place ads on people’s screens.</p>
+<section id="motivation">
+<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this heading"></a></h2>
+<p>Financial gain. Predators seek to minimise spent energy in their hunt for prey. The human hunt for money also tends to take the easiest, opportunistic path. Click-fraud created a full-blown ecosystem of adTech that aggressively monitored users and shoved ads into their face, and fraud-bots that figured out how to get past the countermeasures. Note that it was considered fraud when a bot tricked an advertiser into thinking an ad had been seen, but it was considered totally legitimate for an advertiser to trick users into seeing an ad.</p>
+<section id="the-players">
+<h3>The players<a class="headerlink" href="#the-players" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Advertisers/marketers want to advertise a product or service to sell it.</p></li>
+<li><p>Publishers own one or several websites/social media and display advertisements for payment.</p></li>
+<li><p><a class="reference internal" href="Data-brokers.html"><span class="doc std std-doc">Data brokers</span></a> collect information from users and sell user impressions (<a class="reference internal" href="../assistive-technologies/Behavioural-analysis.html"><span class="doc std std-doc">profiles</span></a>) to advertisers.</p></li>
+</ul>
+</section>
+<section id="types-of-markets">
+<h3>Types of markets<a class="headerlink" href="#types-of-markets" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>An ad exchange is a digital marketplace where advertisers and media owners/publishers buy and sell impressions, often through real-time auctions.</p></li>
+<li><p>Ad networks are similar to ad exchanges except that they typically aggregate impressions from many different media owners, mark them up and pocket the difference.</p></li>
+</ul>
+</section>
+</section>
+<section id="programmatic-markets">
+<h2>Programmatic markets<a class="headerlink" href="#programmatic-markets" title="Permalink to this heading"></a></h2>
+<p>The rise of data-driven ad techniques has accelerated the evolution of the advertising eco-systems. Brands in-sourced ad operations and agencies became data brokers with a different, more hands-on and data-rich partnership approach than was seen in the past.</p>
+<p>Programmatic refers to the automation of buying and trafficking processes for audience targeted ads. It excludes direct publisher and ad network contracts specified by standard insertion orders, but it includes various hybrid models in which direct buys are supported by automated processes, going under the general heading of “programmatic direct”, referring to the application of software to automate and optimise the placement of ads sold directly to advertisers by publishers at a human-negotiated price.</p>
+<p>The programmatic industry grows incredibly fast, and is a complex ecosystem of complementary and competitive product category niches</p>
+<section id="new-players">
+<h3>New players<a class="headerlink" href="#new-players" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>A Demand-Side Platform (DSP) is a technology that advertisers use to buy ad impressions in an automated way. DSPs allow advertisers to bid on inventory from a variety of media owners/publishers.</p></li>
+<li><p>Supply-Side Platforms (SSP’s) use similar technology to that of a DSP except that it is used by media owners to manage their ad inventory and sell impressions programmatically. SSPs allow media owners to connect their inventory to multiple ad exchanges.</p></li>
+<li><p>Service providers: Creative and media agencies and trading desks who specialize in creating advertising and buying and managing the media placement.</p></li>
+<li><p>Media and data providers: Data providers and the software providers for the ecosystem that manage the ad sales on behalf of publishers (SSP), programmatic ad buying (DSP), and data from multiple sources that is made available to marketers to build segments and targets (DMPs).</p></li>
+<li><p>Marketplaces: Ad exchanges for buying and selling digital media, ad networks that aggregate inventory, and data brokers/exchanges that buy and sell consumer data that can be associated with ad media through an identifier such as a cookie ID.</p></li>
+<li><p>Once a media owner/publisher sells an ad impression, an ad server traffics the ad itself, putting it in front of the target consumer whose impression the advertiser purchased.</p></li>
+<li><p>Consumers are the people being grazed on via impressions. Every time we go to an e-commerce site or a retail store, it is considered track-able commercial behaviour. Even when there are no ads, the tracking is there.</p></li>
+</ul>
+</section>
+<section id="terms">
+<h3>Terms<a class="headerlink" href="#terms" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Audience targeting refers to the ability to target ads using specific criteria to identify intended recipients. This excludes most paid search advertising, which targets keywords as a proxy for intent, and various run-of-network and sponsorship arrangements.</p></li>
+<li><p>Real-time bidding (RTB) refers to the subset of programmatic ads that are bought and sold in real-time on auction-based exchanges.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../index.html" class="btn btn-neutral float-left" title="De-anonymisation threat model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Black-markets.html" class="btn btn-neutral float-right" title="Black markets" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+        <a href="https://unseen-uni.netlify.app/">Unseen University</a>, 2022
+
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

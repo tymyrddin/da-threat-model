@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sentiment analysis &mdash; De-anonymisation threat model</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Social network analysis" href="Social-network-analysis.html" />
+    <link rel="prev" title="Risk modelling" href="Risk-modelling.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> De-anonymisation threat model
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Adversaries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Advertising-eco-systems.html">Advertising eco-systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Black-markets.html">Black markets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Data-brokers.html">Data brokers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Data-scientists.html">Data scientists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/EU-Regulators.html">EU Regulators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Employers.html">Employers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Gray-hats.html">Gray hats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Insurance-companies.html">Insurance companies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Law-enforcement.html">Law enforcement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Marketers-and-advertisers.html">Marketers and advertisers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Politicians.html">Politicians</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Assets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Auxiliary-information.html">Auxiliary information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Data-releases.html">Data releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Target-dataset.html">Target dataset</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Attack vectors</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Classification-analysis.html">Classification analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Graph-matching.html">Graph matching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Matching-features.html">Matching features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Sparsity-based.html">Sparsity-based</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Trail-re-identification.html">Trail re-identification</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Attacks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Inference-attacks.html">Inference attacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Linkage-attacks.html">Linkage attacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Structural-attacks.html">Structural attacks</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Threats</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Content-disclosure.html">Content disclosure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Identity-disclosure.html">Identity disclosure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Link-disclosure.html">Link disclosure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/New-form-of-consent.html">New form of consent</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Assistive technologies</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Adversary-skills.html">Adversary skills</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Behavioural-analysis.html">Behavioural analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Content-analysis.html">Content analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Data-storage.html">Data storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Link-prediction.html">Link prediction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Predictive-analysis.html">Predictive analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Spammer-elimination.html">Spammer elimination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistive-technologies/Timeliness.html">Timeliness</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Uses</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Advertising-eco-systems.html">Advertising ecosystems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Click-fraud.html">Click fraud (wars)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Customer-churn-analysis.html">Customer churn analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Customer-experience-analysis.html">Customer experience analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Fraud-detection.html">Fraud detection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Market-analysis.html">Market analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Network-monitoring.html">Network monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Recommendation-engines.html">Recommendation engines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Research-and-development.html">Research &amp; development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Risk-modelling.html">Risk modelling</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sentiment analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Social-network-analysis.html">Social network analysis</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Impacts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Bias-and-discrimination.html">↑ Bias and discrimination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Competition.html">↓ Competition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Data.html">↑ Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Illegal-and-unethical-mining.html">↑ Illegal and unethical mining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Regulation.html">↑ Regulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Surveillance-and-tracking.html">↑ Surveillance and tracking</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/threat-models/">Overview threat models</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/attack-trees/">Attack trees</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://milli-ways.netlify.app/">Data science</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">De-anonymisation threat model</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Sentiment analysis</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/docs/uses/Sentiment-analysis.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sentiment-analysis">
+<h1>Sentiment analysis<a class="headerlink" href="#sentiment-analysis" title="Permalink to this heading"></a></h1>
+<p>Sentiment analysis is a technique to analyse opinions, sentiments, appraisals, and emotions and can for example, predict presidential election results by collecting and converting social media data and analysing the converted data.</p>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading"></a></h2>
+<p>Sentiment analysis uses NLP, statistics, or machine learning methods to extract, identify, or characterise the sentiment content of a text. It can be used to determine associated emotions with a keyword or to predict emotions, for information extraction (discarding subjective information), question answering (and recognising opinion-oriented questions), summarization (accounting for multiple viewpoints), “flame” detection, identifying the suitability of videos for children based on comments, identification of bias in news sources and of (in)appropriate content of a text for a particular context. It has found application in politics/political science, law/policy making, sociology and psychology.</p>
+<p>Common examples of questions asked are “how are people responding to this campaign/release/news item?” or “How have bloggers’ attitudes about the president changed since the election?”. With content analysis tools, unstructured text from social media posts like Tweets and Facebook posts can be analysed to determine the macro level user sentiment related to a particular keyword.</p>
+</section>
+<section id="example-constructing-political-profiles">
+<h2>Example: Constructing political profiles<a class="headerlink" href="#example-constructing-political-profiles" title="Permalink to this heading"></a></h2>
+<section id="data-collection-and-conversion">
+<h3>Data collection and conversion<a class="headerlink" href="#data-collection-and-conversion" title="Permalink to this heading"></a></h3>
+<p>People discus and express their opinion by commenting, posting or sharing status (or tweets). Such social media status expressions can be collected according to the most frequently used keywords that contain for example, words related to election, parties and candidates. It involves content disclosure, and in some cases also link disclosure. Then the data set is cleaned up. For example, status expressions containing insults are removed. Status expressions written in different languages can either be handled manually, or by tools that have the needed language (machine learning) components.
+Classification and evaluation</p>
+<p>After this preprocessing, a text is classified by machine learning, by a lexicon, or by a hybrid of the two, and then evaluated. In its most simple form, classification is done using two steps: training and prediction. The classifier will use the training data to learn to make predictions. The better the dataset, the better the accuracy of the classifier.</p>
+<p>Sentiment classification can be a positive/negative/neutral (where the neutral class is not a state between positive and negative but a separate class that denotes lack of sentiment) or a multi-class problem.</p>
+<ul class="simple">
+<li><p>Python offers several packages for natural language processing. Simple examples of sentiment analysis in python can be found here. In real life, the algorithms are more complex.</p></li>
+<li><p>With the opinionFinder tool it is easy to extract automatically subjective sentences and sentiment expressions. Based on SentiStrength which estimates the strength of positive and negative sentiment in texts and emoticons in various languages, words are classified into categories.</p></li>
+<li><p>Evaluation metrics like Precision, Recall, F-score, and Accuracy can be used. The end results are visualised through graphs, histograms, and confusion matrices.</p></li>
+</ul>
+<p>This sentiment analysis can then be used as a base for targeted voter profiles. Conclusions can now be drawn for example, whether a given voter is with or against a particular party or candidate.</p>
+</section>
+<section id="applications-of-sentiment-analysis">
+<h3>Applications of sentiment analysis<a class="headerlink" href="#applications-of-sentiment-analysis" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Sociological: Diffusion of innovations is a theory that seeks to explain how, why, and at what rate new ideas and technology spread. Opinions and reactions to ideas are relevant to adoption of new ideas. Analysing sentiment reactions on blogs can give insights into this process.</p></li>
+<li><p>Psychological: Sentiment analysis has the potential to augment psychological investigations/experiments with data extracted from natural language text.</p></li>
+<li><p>Political: In politics, sentiment analysis has found numerous applications and possibilities: for analysing trends, identifying ideological bias, targeting messages, gauging reactions, evaluation of public/voters’ opinions and views/discussions of policy. And is used by some data brokers, to serve politicians. The Cambridge Analytica case being an example.</p></li>
+</ul>
+</section>
+<section id="identifying-political-preferences-and-tendencies">
+<h3>Identifying political preferences and tendencies<a class="headerlink" href="#identifying-political-preferences-and-tendencies" title="Permalink to this heading"></a></h3>
+<p>Political preferences and tendency of the population can be assessed using classification and opinion mining (read sentiment analysis) techniques. Both patterns affected by socio-economic variables and voter sentiment analysis can be used. Some known strategies and patterns that have been studied are:</p>
+<ul class="simple">
+<li><p>Organisational affiliation strategies</p></li>
+<li><p>Electoral affiliation strategies</p></li>
+<li><p>Patterns of party systems transformation</p></li>
+<li><p>Organisational affiliation patterns of politicians</p></li>
+<li><p>Electoral affiliation patterns of voters</p></li>
+</ul>
+<p>Those are the usual suspects, but other things in relation to elections have been studied as well.</p>
+<p>For example, Akarca and Tansel studied voter behaviour in Turkey in 2007 and found that Turkish voters took economic performances into account and exhibited a tendency to vote against parties holding power. Voters distinguished between major and minor parties and held parties in power accountable for economic growth (or losses). Surprisingly, only the growth rate of the year preceding the election affected its outcome.</p>
+<p>In 2010 Henderson and McEwen conducted a comparative analysis of voter turnout in regional elections in nine states between 2003 and 2006. According to that research, variations in strength of political autonomy and strength of attachment to the region among the electorate have a strong and positive impact on the level of turnout in regional elections. Their hypothesis of voter turnout in regional election being higher in regions with a high degree of regional distinctiveness was considered proven.</p>
+</section>
+<section id="notes-on-sentiment-analysis">
+<h3>Notes on sentiment analysis<a class="headerlink" href="#notes-on-sentiment-analysis" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Humans are subjective creatures and opinions are important. Being able to interact with people on that level has many advantages for information systems.</p></li>
+<li><p>Sentiment analysis uses comparatively few categories compared to text categorisation.</p></li>
+<li><p>It crosses domains, topics, and users.</p></li>
+<li><p>The categories are not independent.</p></li>
+<li><p>Characteristics of answers to opinion-based questions are different from fact-based questions.</p></li>
+<li><p>In opinion texts, lexical content alone can be misleading.</p></li>
+<li><p>People express opinions in complex ways: rhetorical devices/modes such as sarcasm, irony, implication, intra-textual and sub-sentential reversals, negation, and topic changes can be a challenge for sentiment analysis.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Risk-modelling.html" class="btn btn-neutral float-left" title="Risk modelling" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Social-network-analysis.html" class="btn btn-neutral float-right" title="Social network analysis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+        <a href="https://unseen-uni.netlify.app/">Unseen University</a>, 2022
+
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

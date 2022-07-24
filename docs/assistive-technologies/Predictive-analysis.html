@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Predictive analysis &mdash; De-anonymisation threat model</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Spammer elimination" href="Spammer-elimination.html" />
+    <link rel="prev" title="Link prediction" href="Link-prediction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> De-anonymisation threat model
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Adversaries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Advertising-eco-systems.html">Advertising eco-systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Black-markets.html">Black markets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Data-brokers.html">Data brokers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Data-scientists.html">Data scientists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/EU-Regulators.html">EU Regulators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Employers.html">Employers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Gray-hats.html">Gray hats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Insurance-companies.html">Insurance companies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Law-enforcement.html">Law enforcement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Marketers-and-advertisers.html">Marketers and advertisers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Politicians.html">Politicians</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Assets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Auxiliary-information.html">Auxiliary information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Data-releases.html">Data releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Target-dataset.html">Target dataset</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Attack vectors</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Classification-analysis.html">Classification analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Graph-matching.html">Graph matching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Matching-features.html">Matching features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Sparsity-based.html">Sparsity-based</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Trail-re-identification.html">Trail re-identification</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Attacks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Inference-attacks.html">Inference attacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Linkage-attacks.html">Linkage attacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Structural-attacks.html">Structural attacks</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Threats</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Content-disclosure.html">Content disclosure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Identity-disclosure.html">Identity disclosure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Link-disclosure.html">Link disclosure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/New-form-of-consent.html">New form of consent</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Assistive technologies</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Adversary-skills.html">Adversary skills</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Behavioural-analysis.html">Behavioural analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Content-analysis.html">Content analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data-storage.html">Data storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Link-prediction.html">Link prediction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Predictive analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Spammer-elimination.html">Spammer elimination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Timeliness.html">Timeliness</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Uses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Advertising-eco-systems.html">Advertising ecosystems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Click-fraud.html">Click fraud (wars)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Customer-churn-analysis.html">Customer churn analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Customer-experience-analysis.html">Customer experience analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Fraud-detection.html">Fraud detection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Market-analysis.html">Market analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Network-monitoring.html">Network monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Recommendation-engines.html">Recommendation engines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Research-and-development.html">Research &amp; development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Risk-modelling.html">Risk modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Sentiment-analysis.html">Sentiment analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uses/Social-network-analysis.html">Social network analysis</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Impacts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Bias-and-discrimination.html">↑ Bias and discrimination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Competition.html">↓ Competition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Data.html">↑ Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Illegal-and-unethical-mining.html">↑ Illegal and unethical mining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Regulation.html">↑ Regulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Surveillance-and-tracking.html">↑ Surveillance and tracking</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/threat-models/">Overview threat models</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/attack-trees/">Attack trees</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://milli-ways.netlify.app/">Data science</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">De-anonymisation threat model</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Predictive analysis</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/docs/assistive-technologies/Predictive-analysis.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="predictive-analysis">
+<h1>Predictive analysis<a class="headerlink" href="#predictive-analysis" title="Permalink to this heading"></a></h1>
+<p>Predictive analytics is the practice of extracting information from existing current and historical data sets in order to determine patterns and predict future outcomes and trends by statistical techniques from modelling, machine learning, and data mining. Predictive analytics does not tell you what will happen in the future.</p>
+<section id="method">
+<h2>Method<a class="headerlink" href="#method" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Understanding the problem</p></li>
+<li><p>Tying prediction variables to the problem</p></li>
+<li><p>Choosing statistical models relevant to the problem</p></li>
+<li><p>Preparing the input data for application of the models</p></li>
+<li><p>Validating the models with test data</p></li>
+<li><p>Apply real life data, observing accuracy over time and making adjustments</p></li>
+</ul>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
+<section id="clustering">
+<h3>Clustering<a class="headerlink" href="#clustering" title="Permalink to this heading"></a></h3>
+<p>Cluster analysis can be used when there are a lot of content nodes that are to be divided into different content clusters, and no idea how to create them. Rather than defining groups before looking at the data, clustering allows for finding and analysing groups that have formed “organically” (based on similarity). Applications for cluster analysis include gene sequence analysis, market research, and object recognition.</p>
+<p>When choosing a clustering algorithm, consider whether the algorithm scales to the dataset. Not all clustering algorithms scale efficiently. Many clustering algorithms work by computing the similarity between all pairs of examples. This means runtime increases as the square of the number of examples.</p>
+<ul class="simple">
+<li><p>Centroid-based clustering organises the data into non-hierarchical clusters. K-means is the most widely-used centroid-based clustering algorithm. Centroid-based algorithms are efficient but sensitive to initial conditions and outliers.</p></li>
+<li><p>Connectivity-based (alias hierarchical) algorithms create a tree of clusters. An advantage is that any number of clusters can be chosen by cutting the tree at the right level.</p></li>
+<li><p>Density-based algorithms connect areas of high example density into clusters, allowing for arbitrary-shaped distributions. These algorithms have difficulty with data of varying densities and high dimensions. And by design, these algorithms do not assign outliers to clusters. With the OPTICS algorithm one can view intrinsic clustering structure that could otherwise be identified only in a process of repeated clustering with different parameter settings.</p></li>
+<li><p>Probabilistic (alias distribution-based) algorithms assume data is composed of distributions. As distance from the distribution’s centre increases, the probability that a point belongs to the distribution decreases. Do not use if distribution is not known.</p></li>
+<li><p>Dimensionality reduction reduces the number of features under consideration, where each feature is a dimension that partly represents the objects. With too many features, the data matrices become sparse and analysis suffers from the curse of dimensionality (loss of statistical significance). Plus that it is easier to process smaller data sets. This is achieved by feature selection or feature extraction (combining existing features). The main technique used for feature extraction is Principle Component Analysis (PCA)</p></li>
+<li><p>Neural networks/Deep learning are a set of algorithms, modelled loosely after the human brain, that are designed to recognise patterns. They interpret sensory data through a kind of machine perception, labelling or clustering raw input. The patterns are numerical, contained in vectors, as translations of images, sound, text or time series.</p></li>
+</ul>
+<p>Clustering algorithms can be used in <a class="reference internal" href="../uses/Social-network-analysis.html"><span class="doc std std-doc">social graph analysis</span></a>.</p>
+</section>
+<section id="classification">
+<h3>Classification<a class="headerlink" href="#classification" title="Permalink to this heading"></a></h3>
+<p>Classification models classify input data into categories. Typical applications include medical imaging, speech recognition, and credit scoring.</p>
+<p>Classification is the process of finding a model (or function) that describes and distinguishes data classes or concepts, for the purpose of being able to use the model to predict the class of objects whose class label is unknown. The derived model is based on the analysis of a set of training data (data objects whose class label is known). The derived model can take the form of classification (IF-THEN) rules, decision trees, mathematical formulae, or neural networks.</p>
+<ul class="simple">
+<li><p>A decision tree is a flow-chart-like tree structure, where each node denotes a test on an attribute value, each branch represents an outcome of the test, and tree leaves represent classes or class distributions. Decision trees can easily be converted to classification rules.</p></li>
+<li><p>A neural network, when used for classification, is a collection of neuron-like processing units with weighted connections between the units.</p></li>
+<li><p>There are many other methods for constructing classification models, such as support vector machines, Naïve Bayesian Classification, and Nearest Neighbour Classification.</p></li>
+</ul>
+<p>Classification algorithms can be for <a class="reference internal" href="../uses/Customer-churn-analysis.html"><span class="doc std std-doc">customer retention</span></a> or developing a <a class="reference internal" href="../uses/Social-network-analysis.html"><span class="doc std std-doc">recommendation engine</span></a>.</p>
+</section>
+<section id="regression">
+<h3>Regression<a class="headerlink" href="#regression" title="Permalink to this heading"></a></h3>
+<p>Regression analysis is a form of predictive modelling technique which investigates the relationship between a dependent (target) and independent variable(s) (predictor). This technique is used for forecasting, time series modelling and finding the causal effect relationship between the variables. Typical applications include electricity load forecasting and algorithmic trading.</p>
+<p>Regression analysis:</p>
+<ul class="simple">
+<li><p>Indicates the significant relationships between dependent variable and independent variable.</p></li>
+<li><p>Indicates the strength of impact of multiple independent variables on a dependent variable.</p></li>
+<li><p>Can be used to compare the effects of variables measured on different scales.</p></li>
+</ul>
+<p>Regression algorithms can be used for predicting the next outcome of time-driven events, for example in <a class="reference internal" href="../uses/Network-monitoring.html"><span class="doc std std-doc">network monitoring</span></a>.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Link-prediction.html" class="btn btn-neutral float-left" title="Link prediction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Spammer-elimination.html" class="btn btn-neutral float-right" title="Spammer elimination" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+        <a href="https://unseen-uni.netlify.app/">Unseen University</a>, 2022
+
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>
